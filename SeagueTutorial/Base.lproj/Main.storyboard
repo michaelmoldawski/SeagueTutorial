@@ -25,21 +25,92 @@
             </objects>
             <point key="canvasLocation" x="-1191" y="5"/>
         </scene>
-        <!--Red View Controller-->
+        <!--Red-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="redViewController" customModule="SeagueTutorial" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="by1-TX-k4C">
+                                <rect key="frame" x="211" y="350.5" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="677-iX-WQw"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="EYU-fo-BVk"/>
+                                </constraints>
+                                <state key="normal" title="Go To Green"/>
+                                <connections>
+                                    <action selector="greenButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n5S-7Z-Wbc"/>
+                                </connections>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yi9-8F-8Aj">
+                                <rect key="frame" x="137.5" y="350" width="102" height="31"/>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pd7-ph-uRp">
+                                <rect key="frame" x="44" y="350.5" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="R27-fz-iqx"/>
+                                </constraints>
+                                <state key="normal" title="Go To Yellow"/>
+                                <connections>
+                                    <action selector="yellowButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qUo-0b-pvV"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Pd7-ph-uRp" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="0aI-1Z-RkI"/>
+                            <constraint firstItem="yi9-8F-8Aj" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="5uM-i7-6St"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="by1-TX-k4C" secondAttribute="trailing" constant="64" id="9Iu-Dc-lKY"/>
+                            <constraint firstItem="yi9-8F-8Aj" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="TTg-ze-oDu"/>
+                            <constraint firstItem="Pd7-ph-uRp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="44" id="anx-Al-2Qb"/>
+                            <constraint firstItem="by1-TX-k4C" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="sEr-eb-VVO"/>
+                            <constraint firstItem="yi9-8F-8Aj" firstAttribute="width" secondItem="by1-TX-k4C" secondAttribute="width" id="u0d-cb-S7t"/>
+                            <constraint firstItem="yi9-8F-8Aj" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="uHo-3b-ZG4"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="geS-CX-dut"/>
+                    <navigationItem key="navigationItem" title="Red" id="geS-CX-dut"/>
+                    <connections>
+                        <outlet property="segueSwitch" destination="yi9-8F-8Aj" id="bBt-eL-zBB"/>
+                        <segue destination="GXw-su-vF8" kind="show" identifier="Yellow" id="KlD-tv-oBF"/>
+                        <segue destination="ybZ-Xx-5ko" kind="show" identifier="Green" id="kmv-cC-2a8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-247" y="5"/>
+            <point key="canvasLocation" x="-247.19999999999999" y="4.9475262368815596"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="fp5-7q-ptL">
+            <objects>
+                <viewController id="ybZ-Xx-5ko" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JA7-s9-SGo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="1" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <viewLayoutGuide key="safeArea" id="32c-E9-upG"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nHe-9A-u7s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="649" y="248"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="L25-Ff-N6W">
+            <objects>
+                <viewController id="GXw-su-vF8" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xX4-lN-hfV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <viewLayoutGuide key="safeArea" id="abd-lU-6dS"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jsi-PL-IZ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="665" y="-408"/>
         </scene>
     </scenes>
 </document>

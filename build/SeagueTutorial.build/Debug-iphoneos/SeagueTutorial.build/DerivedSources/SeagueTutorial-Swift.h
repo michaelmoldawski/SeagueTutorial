@@ -199,11 +199,15 @@ SWIFT_CLASS("_TtC14SeagueTutorial11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UISwitch;
 @class NSBundle;
 @class NSCoder;
 
 SWIFT_CLASS("_TtC14SeagueTutorial17redViewController")
 @interface redViewController : UIViewController
+@property (nonatomic, weak) IBOutlet UISwitch * _Null_unspecified segueSwitch;
+- (IBAction)yellowButtonTapped:(id _Nonnull)sender;
+- (IBAction)greenButtonTapped:(id _Nonnull)sender;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
